@@ -49,3 +49,41 @@ function applyFilters(){
   renderPets(filtered);
   return filtered;
 }
+
+function renderDetalhes(p){
+  const html = `
+    <div class="media"><img src="${p.foto}" alt="${p.especie} ${p.nome}"></div>
+    <div class="body">
+      <h2 id="modalTitle">${p.nome}</h2>
+      <div class="badges">
+        <span class="badge">${p.especie}</span>
+        <span class="badge">${p.idade}</span>
+        <span class="badge">${p.porte}</span>
+        <span class="badge">${p.sexo}</span>
+      </div>
+      <p>${p.descricao}</p>
+      <div class="actions">
+        <a class="btn-primary" href="adocao.html?pet=${p.id}">Quero adotar</a>
+        <button class="btn-ghost" data-close>Fechar</button>
+      </div>
+    </div>`;
+  openModal(html);
+}
+
+let current = [];
+window.addEventListener('DOMContentLoaded', ()=>{
+  current = applyFilters();
+  filtros.addEventListener('input', ()=>{ page=1; current=applyFilters(); });
+  filtros.addEventListener('reset', ()=> setTimeout(()=>{ page=1; current=applyFilters(); },0));
+  ordem.addEventListener('change', ()=>{ page=1; current=applyFilters(); });
+
+  prev.addEventListener('click', ()=>{ if(page>1){ page--; renderPets(current); } });
+  next.addEventListener('click', ()=>{ const total=Math.ceil(current.length/PER_PAGE); if(page<total){ page++; renderPets(current);} });
+
+  lista.addEventListener('click', (e)=>{
+    const btn = e.target.closest('button[data-action]'); if(!btn) return; const id=+btn.dataset.id; const pet=PETS.find(p=>p.id===id);
+    if(btn.dataset.action==='detalhes'){ renderDetalhes(pet); }
+    else if(btn.dataset.action==='adotar'){ location.href = `adocao.html?pet=${id}`; }
+    else if(btn.dataset.action==='fav'){ const on = toggleFav(id); btn.textContent = (on?'★':'☆') + ' Favoritar'; }
+  });
+});
