@@ -65,3 +65,69 @@ img{max-width:100%; display:block}
 .section.alt{background:var(--surface)}
 .section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; margin-bottom:16px}
 .section h2{margin:0 0 8px; font-size:1.8rem; color:var(--ink-900)}
+
+.filters{display:grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap:12px; align-items:end; margin:18px 0 22px}
+.field{display:grid; gap:6px}
+.field.full{grid-column:1 / -1}
+label{font-weight:800; font-size:.9rem}
+input, select, textarea{border:2px solid #eceafc; background:white; border-radius:12px; padding:.7rem .9rem; font:inherit; outline:none}
+input:focus, select:focus, textarea:focus{border-color:var(--primary-400); box-shadow:0 0 0 3px rgba(145,121,255,.2)}
+.muted{color:var(--muted)}
+
+.grid{display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px}
+.card{background:white; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm); display:flex; flex-direction:column}
+.card .media img{width:100%; aspect-ratio:4/3; object-fit:cover}
+.card .body{padding:14px}
+.badges{display:flex; gap:8px; flex-wrap:wrap; margin:.25rem 0 .5rem}
+.badge{background:rgba(167,139,250,.18); color:var(--ink-700); font-weight:800; padding:.25rem .5rem; border-radius:999px; font-size:.78rem}
+.card h3{margin:.2rem 0; color:var(--ink-900)}
+.card p{margin:.25rem 0 .75rem}
+.card .actions{display:flex; gap:8px; margin-top:auto; padding:0 14px 14px}
+
+.empty{padding:24px; border:2px dashed #e7e3ff; border-radius:16px; text-align:center; color:var(--muted)}
+.paginacao{display:flex; align-items:center; gap:12px; justify-content:center; margin-top:14px}
+
+.two-cols{display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:start}
+.panel{background:white; border:1px solid #eee; border-radius:16px; padding:18px; box-shadow:var(--shadow-sm)}
+.checks{display:grid; gap:.5rem; padding-left:1.1rem}
+.checks li{list-style: '✔  ';}
+
+.contact, .adoption{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; margin-top:10px}
+.actions{display:flex; gap:10px; align-items:center}
+
+.footer{background:white; border-top:1px solid #eee; margin-top:40px}
+.foot{display:flex; align-items:center; justify-content:space-between; padding:24px 0}
+.social{display:flex; gap:14px}
+.social a{color:var(--primary-600); font-weight:800; text-decoration:none}
+
+.modal{position:fixed; inset:0; display:none}
+.modal[aria-hidden="false"]{display:block}
+.modal-backdrop{position:absolute; inset:0; background:rgba(8,4,32,.5)}
+.modal-card{position:relative; z-index:1; width:min(760px, 92vw); margin:6vh auto; background:white; border-radius:20px; overflow:hidden; box-shadow:var(--shadow-lg)}
+.modal-card .media img{width:100%; aspect-ratio: 16/9; object-fit:cover}
+.modal-card .body{padding:16px}
+.modal .close{position:absolute; top:10px; right:10px; border:none; background:white; width:36px; height:36px; border-radius:50%; box-shadow:var(--shadow-sm); font-size:1.2rem}
+
+.video-wrap{position:relative; padding-top:56.25%; border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm)}
+.video-wrap iframe{position:absolute; inset:0; width:100%; height:100%}
+.snackbar{position:fixed; left:50%; transform:translateX(-50%); bottom:24px; background:#1E1B2E; color:white; padding:10px 16px; border-radius:999px; opacity:0; transition:opacity .3s, bottom .3s;}
+.snackbar.show{opacity:1; bottom:32px}
+.pet-view{display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start}
+.pet-view .media{border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm)}
+
+@media (max-width: 980px){
+  .hero-grid{grid-template-columns:1fr}
+  .filters{grid-template-columns: repeat(2, minmax(0,1fr))}
+  .grid{grid-template-columns: repeat(2, minmax(0,1fr))}
+  .two-cols{grid-template-columns:1fr}
+  .pet-view{grid-template-columns:1fr}
+}
+@media (max-width: 680px){
+  #btnMenu{display:block}
+  .menu{position:absolute; right:1rem; top:64px; background:var(--surface); border:1px solid #eee; border-radius:12px; padding:.5rem; flex-direction:column; align-items:stretch; width:min(260px, 90vw); display:none}
+  .menu.open{display:flex}
+  .grid{grid-template-columns:1fr}
+  .contact, .adoption{grid-template-columns:1fr}
+}
+:root.dark .panel, :root.dark .card, :root.dark .footer, :root.dark .menu, :root.dark .highlight{background:#1A1530; border-color:#2A2640}
+:root.dark input, :root.dark select, :root.dark textarea{background:#110D22; border-color:#2A2640; color:#EDEBFF}
