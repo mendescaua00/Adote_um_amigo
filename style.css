@@ -1,0 +1,67 @@
+/*
+  AdoteAmigo — Tema Roxo & Branco (Responsivo)
+  Regras: >30 estilizações (muito acima), grid responsivo, dark mode, componentes.
+*/
+:root{
+  --primary-700:#5B3BFF;
+  --primary-600:#6B4EFF;
+  --primary-500:#7C5CFF;
+  --primary-400:#9179FF;
+  --accent-300:#A78BFA;
+  --ink-900:#1E1B2E;
+  --ink-700:#2D2A3A;
+  --muted:#6B6A76;
+  --surface:#FFFFFF;
+  --background:#F7F6FF;
+  --radius:16px; --radius-sm:10px;
+  --shadow-lg:0 20px 40px rgba(32,16,96,.15);
+  --shadow-sm:0 8px 20px rgba(32,16,96,.12);
+}
+/* Dark theme */
+:root.dark{
+  --ink-900:#F1EEFF;
+  --ink-700:#E7E4FF;
+  --muted:#C6C3E9;
+  --surface:#171326;
+  --background:#0F0C1B;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0; font-family:"Nunito", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial; color:var(--ink-700); background:var(--background)}
+img{max-width:100%; display:block}
+.container{width:min(1120px, 92vw); margin-inline:auto}
+
+.topbar{position:sticky; top:0; background:rgba(255,255,255,.8); backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid #eee; z-index:10}
+:root.dark .topbar{background:rgba(15,12,27,.7); border-color:#2A2640}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+.brand{display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; color:var(--ink-900); font-weight:800}
+.brand .brand-accent{color:var(--primary-600)}
+.logo{font-size:1.4rem}
+.menu{display:flex; gap:.5rem; align-items:center}
+.menu a{color:var(--ink-700); text-decoration:none; font-weight:700; padding:.5rem .75rem; border-radius:10px}
+.menu a:hover{background:rgba(107,78,255,.08)}
+.menu a.active{background:rgba(107,78,255,.18)}
+#btnMenu{display:none}
+
+.btn-primary{background:linear-gradient(135deg,var(--primary-600),var(--primary-400)); color:white; padding:.7rem 1rem; border:none; border-radius:12px; font-weight:800; text-decoration:none; box-shadow:var(--shadow-sm)}
+.btn-primary:hover{filter:brightness(1.05)}
+.btn-outline{border:2px solid var(--primary-400); color:var(--primary-600); padding:.6rem 1rem; border-radius:12px; font-weight:800; text-decoration:none; background:transparent}
+.btn-ghost{background:transparent; border:1px solid #e7e7f8; color:var(--ink-700); padding:.6rem .9rem; border-radius:10px; font-weight:700}
+.chip{display:inline-block; padding:.1rem .45rem; background:rgba(167,139,250,.25); border-radius:999px; font-size:.75rem; margin-left:.25rem}
+
+.hero{padding:48px 0 20px; background:radial-gradient(1200px 600px at 80% -10%, rgba(167,139,250,.35), transparent 60%)}
+.hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:2rem; align-items:center}
+.hero h1{font-size:clamp(2rem, 3vw + 1rem, 3rem); line-height:1.1; margin:0 0 12px; color:var(--ink-900)}
+.hero p{margin:0 0 18px; font-size:1.1rem}
+.grad{background:linear-gradient(135deg,var(--primary-600),var(--accent-300)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero-card{border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-lg)}
+.hero-card img{aspect-ratio: 16/10; object-fit:cover}
+.hero-actions{display:flex; gap:12px; flex-wrap:wrap}
+.highlights{display:flex; gap:18px; margin-top:14px}
+.highlight{background:white; padding:10px 14px; border-radius:12px; box-shadow:var(--shadow-sm); display:grid; text-align:center}
+.highlight strong{font-size:1.2rem}
+
+.section{padding:56px 0}
+.section.alt{background:var(--surface)}
+.section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; margin-bottom:16px}
+.section h2{margin:0 0 8px; font-size:1.8rem; color:var(--ink-900)}
