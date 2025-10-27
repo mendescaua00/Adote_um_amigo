@@ -47,3 +47,55 @@
         <div class="hero-card"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1200&auto=format&fit=crop" alt="Cães e gatos"/></div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="container two-cols">
+        <div>
+          <h2>Destaques</h2>
+          <p>Favoritos salvos no seu navegador, filtros rápidos e formulário intuitivo. Veja também nossa <a href="midia.html">galeria de mídia</a>.</p>
+          <ul class="checks">
+            <li>Filtros + busca + ordenação</li>
+            <li>Favoritos (localStorage)</li>
+            <li>Detalhes com modal</li>
+            <li>Dark Mode</li>
+          </ul>
+          <a class="btn-primary" href="pets.html">Explorar lista de pets</a>
+        </div>
+        <div class="panel">
+          <h3>Apresentação em vídeo</h3>
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5dsGWM5XGdg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <h3>Mensagem de áudio</h3>
+          <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">Seu navegador não suporta áudio.</audio>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div>
+        <a class="brand" href="index.html"><span class="logo">🐾</span><strong>Adote</strong><span class="brand-accent">Amigo</span></a>
+        <p class="muted">© <span id="ano"></span> AdoteAmigo. Todos os direitos reservados.</p>
+      </div>
+      <nav class="social">
+        <a aria-label="Instagram" href="#">Instagram</a>
+        <a aria-label="Facebook" href="#">Facebook</a>
+        <a aria-label="WhatsApp" href="#">WhatsApp</a>
+      </nav>
+    </div>
+  </footer>
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <button class="close" data-close aria-label="Fechar">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
