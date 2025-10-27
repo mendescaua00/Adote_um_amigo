@@ -1,4 +1,5 @@
-{
+const PETS = [
+  {
     "id": 1,
     "nome": "Luna",
     "especie": "Gato",
@@ -128,3 +129,74 @@
     "descricao": "Boazinha e silenciosa.",
     "foto": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/05/gato-laranja-e1748043537291.jpg?w=1200&h=1200&crop=1"
   },
+  {
+    "id": 14,
+    "nome": "Tico",
+    "especie": "Cachorro",
+    "idade": "Filhote",
+    "porte": "Pequeno",
+    "sexo": "Macho",
+    "descricao": "Companheiro e esperto.",
+    "foto": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": 15,
+    "nome": "Lola",
+    "especie": "Cachorro",
+    "idade": "Filhote",
+    "porte": "Médio",
+    "sexo": "Fêmea",
+    "descricao": "Calma e educada.",
+    "foto": "https://adimax.com.br/wp-content/uploads/2022/06/como-adestrar-cachorro-filhote.jpg"
+  },
+  {
+    "id": 16,
+    "nome": "Simba",
+    "especie": "Gato",
+    "idade": "Adulto",
+    "porte": "Pequeno",
+    "sexo": "Macho",
+    "descricao": "Rei da casa, manso.",
+    "foto": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": 17,
+    "nome": "Pipoca",
+    "especie": "Cachorro",
+    "idade": "Filhote",
+    "porte": "Pequeno",
+    "sexo": "Macho",
+    "descricao": "Soneca profissional.",
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdxsj7m51-AMp2Fpex9QaRg4TJVOBo88WB_A&s"
+  },
+  {
+    "id": 18,
+    "nome": "Nino",
+    "especie": "Gato",
+    "idade": "Adulto",
+    "porte": "Pequeno",
+    "sexo": "Macho",
+    "descricao": "Arteiro adorável.",
+    "foto": "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": 19,
+    "nome": "Fiona",
+    "especie": "Cachorro",
+    "idade": "Adulto",
+    "porte": "Grande",
+    "sexo": "Fêmea",
+    "descricao": "Protetora e doce.",
+    "foto": "https://img.freepik.com/fotos-gratis/retrato-de-solo-adoravel-cachorro-beagle_53876-64817.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 20,
+    "nome": "Zara",
+    "especie": "Gato",
+    "idade": "Filhote",
+    "porte": "Pequeno",
+    "sexo": "Fêmea",
+    "descricao": "Sábia e calma.",
+    "foto": "https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/31ffe75e-5ce0-4e37-92f6-9feecafba26d/gato-brincando-linha.jpg?w=3840&q=75&auto=format"
+  }
+];
