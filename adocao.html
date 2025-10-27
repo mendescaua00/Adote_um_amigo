@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adote um amigo! Encontre cães e gatos para adoção responsável." />
+  <title>AdoteAmigo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='20' cy='20' r='8' fill='%236B4EFF'/><circle cx='44' cy='20' r='8' fill='%236B4EFF'/><circle cx='18' cy='42' r='8' fill='%236B4EFF'/><circle cx='46' cy='42' r='8' fill='%236B4EFF'/><circle cx='32' cy='34' r='10' fill='%23A78BFA'/></svg>">
+  <title>Adotar | AdoteAmigo</title>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="logo">🐾</span><strong>Adote</strong><span class="brand-accent">Amigo</span></a>
+      <button id="btnMenu" class="btn-ghost" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav id="menu" class="menu" aria-label="Principal">
+        <a href="pets.html" >Pets</a>
+        <a href="favoritos.html" >Favoritos <span id="favCount" class="chip">0</span></a>
+        <a href="midia.html" >Mídia</a>
+        <a href="sobre.html" >Sobre</a>
+        <a href="contato.html" >Contato</a>
+        <a class="btn-primary" href="adocao.html">Quero Adotar</a>
+        <button id="darkToggle" class="btn-ghost" aria-label="Alternar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section alt">
+      <div class="container">
+        <h2>Formulário de adoção</h2>
+        <p>Preencha seus dados; retornaremos rapidamente.</p>
+        <form id="adocaoForm" class="adoption" novalidate>
+          <div class="field"><label for="petSelecionado">Pet escolhido</label><select id="petSelecionado" required><option value="">Selecione um pet</option></select></div>
+          <div class="field"><label for="nome">Nome completo</label><input id="nome" required /></div>
+          <div class="field"><label for="email">E-mail</label><input id="email" type="email" required /></div>
+          <div class="field"><label for="telefone">Telefone</label><input id="telefone" type="tel" placeholder="(xx) xxxxx-xxxx" required /></div>
+          <div class="field full"><label for="mensagem">Por que deseja adotar?</label><textarea id="mensagem" rows="4" required></textarea></div>
+          <div class="actions"><button type="submit" class="btn-primary">Enviar candidatura</button><small class="muted">* Demonstração</small></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div>
+        <a class="brand" href="index.html"><span class="logo">🐾</span><strong>Adote</strong><span class="brand-accent">Amigo</span></a>
+        <p class="muted">© <span id="ano"></span> AdoteAmigo. Todos os direitos reservados.</p>
+      </div>
+      <nav class="social">
+        <a aria-label="Instagram" href="#">Instagram</a>
+        <a aria-label="Facebook" href="#">Facebook</a>
+        <a aria-label="WhatsApp" href="#">WhatsApp</a>
+      </nav>
+    </div>
+  </footer>
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <button class="close" data-close aria-label="Fechar">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+
+  <script src="js/adocao.js"></script>
+</body>
+</html>
